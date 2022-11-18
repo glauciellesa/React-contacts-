@@ -1,0 +1,22 @@
+{
+  "contacts": [
+    {
+      "name": "Beyonce",
+      "img": "https://img.freepik.com/fotos-gratis/sorrindo-mulher-preta-fazendo-gesto-de-moldura_1262-6249.jpg?w=1380&t=st=1668714329~exp=1668714929~hmac=738c59490a5377b4b3134d5721e866c8ed6781d7487c3487b788135a79234ac2",
+      "phone": "+123 456 789",
+      "email": "b@once.com"
+    },
+    {
+      "name": "Leonyonce",
+      "img": "https://img.freepik.com/fotos-gratis/homem-bonito-e-confiante-sorrindo-com-as-maos-cruzadas-no-peito_176420-18743.jpg?size=626&ext=jpg&ga=GA1.2.1206950982.1668714325",
+      "phone": "+123 456 789",
+      "email": "b@once.com"
+    },
+    {
+      "name": "Zeca",
+      "img": "https://img.freepik.com/fotos-gratis/estilo-de-vida-beleza-e-moda-conceito-de-emocoes-de-pessoas-jovem-gerente-de-escritorio-feminino-asiatico-ceo-com-expressao-satisfeita-em-pe-sobre-um-fundo-branco-sorrindo-com-os-bracos-cruzados-sobre-o-peito_1258-59329.jpg?w=2000",
+      "phone": "+123 456 789",
+      "email": "zeca@once.com"
+    }
+  ]
+}
