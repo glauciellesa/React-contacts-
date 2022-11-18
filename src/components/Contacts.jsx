@@ -1,30 +1,39 @@
 import styled from "styled-components";
+import Avatar from "./Avatar";
+import Bottom from "./Bottom";
 
-const Contacts = (props) => {
+export default (props) => {
   const contacts = props.contacts;
-  return contacts.map((contact) => {
-    return (
-      <StyledNotes key={contact.name}>
-        <div className="card">
-          <div className="top">
-            <h1> {contact.name} </h1>
-          </div>
-          <div className="divImg">
-            <img src={contact.img} alt="images" />
-          </div>
-          <div className="paragrafe">
-            <p> {contact.phone} </p>
-            <p> {contact.email}</p>
-          </div>
-        </div>
-      </StyledNotes>
-    );
-  });
+  return contacts.map(createContactCard);
 };
 
-export default Contacts;
+const createContactCard = (contact) => (
+  <StyledContacts key={contact.name}>
+    <Card contact={contact} />
+  </StyledContacts>
+);
 
-const StyledNotes = styled.div`
+const Card = ({ contact }) => (
+  <div className="card">
+    <Header contact={contact} />
+    <AvatarContainer>
+      <Avatar img={contact.img} />
+    </AvatarContainer>
+    <Bottom info={contact} />
+  </div>
+);
+
+const Header = ({ contact }) => (
+  <div className="top">
+    <h1> {contact.name} </h1>
+  </div>
+);
+
+const AvatarContainer = ({ children }) => (
+  <div className="divImg">{children}</div>
+);
+
+const StyledContacts = styled.div`
   display: flex;
   justify-content: center;
   .top {
@@ -47,20 +56,6 @@ const StyledNotes = styled.div`
     height: 250px;
     margin: 10px;
 
-    .divImg {
-      position: absolute;
-      right: 20px;
-      top: 40px;
-    }
-
-    img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 7px solid #fff;
-      object-fit: cover;
-    }
-
     h1 {
       font-size: 2.5em;
       margin-bottom: 6px;
@@ -70,9 +65,16 @@ const StyledNotes = styled.div`
       color: #333;
     }
 
+    .divImg {
+      position: absolute;
+      right: 20px;
+      top: 40px;
+    }
+
     .paragrafe {
       display: flex;
       flex-direction: column;
+      padding-top: 20px;
     }
 
     p {
